@@ -28,7 +28,7 @@ Adicione caixa de seguidores, caixa de fotos e vídeos e caixa de tendências.
 
 Tente clonar este layout:
 
-![timeline.png](https://bitbucket.org/repo/p44MEx5/images/2766869629-timeline.png)
+![timeline.png](/resources/timeline.png)
 
 Você pode usar nossas contas de teste para autorizar suas solicitações.
 
