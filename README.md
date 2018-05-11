@@ -46,9 +46,8 @@ A credencial de token portador codificada Base64 para a API do Twitter é ```bWV
 O apiKey para o Flickr api é ```3de470a3de4c9510ec040b59100b4cf2```.
 
 
-### How to send the results
 
 * Trabalhe localmente em uma ramificação personalizada ```git checkout -b my-solutions``` e nos envie um pull request ;)
 
 
-Não esqueça de ensinar como rodamos seu projeto 😎
+* Não esqueça de ensinar como rodamos seu projeto 😎
