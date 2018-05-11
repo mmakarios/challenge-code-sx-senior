@@ -1,8 +1,17 @@
 # B2W Challenge
 
-### Mission
+### Missão
 
 Desenvolva uma linha do tempo do clone do Twitter seguindo a imagem anexada. Sua solução deve ser responsiva.
+
+- Código HTML semântico
+- Utilize alguma metodologia CSS e um pré-processador, de preferência Sass
+- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
+- Utilize react e redux
+- Utilize algum module bundler, seja Webpack ou Brunch
+- O Javascript seja escrito utilizando as especificações do EcmaScript 2015 (ES6)
+- Caso haja necessidade, pode utilizar um Task Manager. Sugerimos o Gulp :)
+- Escreve testes unitários :)
 
 ##### 3 Pontos
 
@@ -37,10 +46,9 @@ A credencial de token portador codificada Base64 para a API do Twitter é ```bWV
 O apiKey para o Flickr api é ```3de470a3de4c9510ec040b59100b4cf2```.
 
 
-### What you will be assessed
-
-Mantenha sua solução o mais simples possível. "Feito é melhor que perfeito".
-
 ### How to send the results
 
 * Trabalhe localmente em uma ramificação personalizada ```git checkout -b my-solutions``` e nos envie um pull request ;)
+
+
+Não esqueça de ensinar como rodamos seu projeto 😎
