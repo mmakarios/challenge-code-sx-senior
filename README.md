@@ -13,7 +13,7 @@ Desenvolva uma linha do tempo do clone do Twitter seguindo a imagem anexada. Sua
 - Caso haja necessidade, pode utilizar um Task Manager. Sugerimos o Gulp :)
 - Escreve testes unitários :)
 
-##### 3 Pontos
+##### 5 Pontos
 
 Use a API do Twitter para criar sua linha do tempo. Seu cronograma deve incluir uma lista de tweets recentes do @ americanocom (conteúdo principal), foto da capa e foto do perfil.
 
@@ -28,10 +28,6 @@ Chame a API do Flickr e obtenha a primeira imagem com base no #hashtag que você
 ##### 2 Pontos
 
 Adicione outras informações como contagem de tweets, seguidores, seguidores e curtidas. Desenvolva a paginação infinita.
-
-##### 2 Pontos
-
-Adicione caixa de seguidores, caixa de fotos e vídeos e caixa de tendências.
 
 ### Sugestão
 
