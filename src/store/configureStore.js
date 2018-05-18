@@ -1,4 +1,4 @@
-import {createStore, compose, applyMiddleware} from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
@@ -6,6 +6,17 @@ import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
 export const history = createHistory();
+import axios from 'axios';
+import axiosMiddleware from 'redux-axios-middleware';
+import * as endpoints from '../constants/endpoints';
+
+const client = axios.create({
+  baseURL: endpoints.TWITTER_API,
+  headers: {
+    Authorization: 'Bearer ' + process.env.TWITTER_TOKEN
+  }
+});
+
 function configureStoreProd(initialState) {
   const reactRouterMiddleware = routerMiddleware(history);
   const middlewares = [
@@ -15,11 +26,13 @@ function configureStoreProd(initialState) {
     // https://github.com/reduxjs/redux-thunk#injecting-a-custom-argument
     thunk,
     reactRouterMiddleware,
+    axiosMiddleware(client)
   ];
 
-  return createStore(rootReducer, initialState, compose(
-    applyMiddleware(...middlewares)
-    )
+  return createStore(
+    rootReducer,
+    initialState,
+    compose(applyMiddleware(...middlewares))
   );
 }
 
@@ -35,12 +48,15 @@ function configureStoreDev(initialState) {
     // https://github.com/reduxjs/redux-thunk#injecting-a-custom-argument
     thunk,
     reactRouterMiddleware,
+    axiosMiddleware(client)
   ];
 
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add support for Redux dev tools
-  const store = createStore(rootReducer, initialState, composeEnhancers(
-    applyMiddleware(...middlewares)
-    )
+  const composeEnhancers =
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add support for Redux dev tools
+  const store = createStore(
+    rootReducer,
+    initialState,
+    composeEnhancers(applyMiddleware(...middlewares))
   );
 
   if (module.hot) {
@@ -54,6 +70,9 @@ function configureStoreDev(initialState) {
   return store;
 }
 
-const configureStore = process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev;
+const configureStore =
+  process.env.NODE_ENV === 'production'
+    ? configureStoreProd
+    : configureStoreDev;
 
 export default configureStore;
