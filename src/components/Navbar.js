@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Media from 'react-media';
 import mediaQueries from '../constants/mediaQueries';
+import Username from './Username';
+import './Navbar.scss';
 
 export default class Navbar extends Component {
   render() {
     const activeStyle = { color: 'gray' };
 
-    const navbarStyle = {
-      height: '49px'
-    };
-
     return (
-      <div style={navbarStyle}>
+      <div id="navbar">
         <Media query={mediaQueries.medium}>
           {matches =>
             matches ? (
-              <div>
-                <span>americanas.com</span>
-              </div>
+              <Username />
             ) : (
               <div>
                 <NavLink exact to="/" activeStyle={activeStyle}>
