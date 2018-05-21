@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Media from 'react-media';
 import mediaQueries from '../constants/mediaQueries';
-import Username from './Username';
+import DisplayName from './DisplayName';
 import './Navbar.scss';
 
 export default class Navbar extends Component {
@@ -14,7 +14,7 @@ export default class Navbar extends Component {
         <Media query={mediaQueries.medium}>
           {matches =>
             matches ? (
-              <Username />
+              <DisplayName />
             ) : (
               <div>
                 <NavLink exact to="/" activeStyle={activeStyle}>
