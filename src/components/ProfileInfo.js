@@ -3,12 +3,19 @@ import DisplayName from './DisplayName';
 import Username from './Username';
 import locationIcon from '../assets/twitter-newui-iconkit/twitter-location.svg';
 import linkIcon from '../assets/twitter-newui-iconkit/twitter-link.svg';
+import HeaderPhoto from './HeaderPhoto';
+import ProfilePhoto from './ProfilePhoto';
+import FollowButton from './FollowButton';
+
 import './ProfileInfo.scss';
 
 export default class ProfileInfo extends Component {
   render() {
     return (
       <div className="profile-info">
+        <HeaderPhoto />
+        <ProfilePhoto />
+        <FollowButton />
         <DisplayName />
         <Username />
         <p className="description">
