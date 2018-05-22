@@ -4,5 +4,9 @@
     width: 25%;
     margin-top: -25px;
     margin-bottom: 10px;
+
+    @include media('>=tablet') {
+      margin-top: -80px;
+    }
   }
 }

@@ -152,6 +152,12 @@ export default {
                 includePaths: [path.resolve(__dirname, 'src', 'scss')],
                 sourceMap: true
               }
+            },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: ['./src/styles/_include-media.scss']
+              }
             }
           ]
         })
