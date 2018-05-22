@@ -1,6 +1,6 @@
 .header-photo {
   img {
-    width: 100vw;
+    width: calc(100% + 20px);
     margin: -10px 0 0 -10px;
   }
 }
