@@ -2,10 +2,12 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.28rem;
+  line-height: 1.25;
 
   img {
     margin-left: 4px;
     height: 1em;
+    filter: brightness(0.6) sepia(1) saturate(6) hue-rotate(165deg);
   }
 }
